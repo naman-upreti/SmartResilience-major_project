@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .menu-item {
+    @apply w-full flex items-center gap-3 px-2 py-2 rounded-lg text-gray-700 dark:text-gray-300
+           hover:bg-gradient-to-r hover:from-emerald-50 hover:to-sky-50 
+           dark:hover:from-emerald-900/20 dark:hover:to-sky-900/20
+           hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-200 mb-1;
+  }
+
+  .metric-card {
+    @apply bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-xl p-4 border border-gray-200 dark:border-gray-700
+           shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-200;
+  }
+
+  .status-indicator {
+    @apply w-2 h-2 rounded-full animate-pulse;
+  }
+}
